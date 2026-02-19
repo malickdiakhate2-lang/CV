@@ -57,22 +57,22 @@ with col1:
 
     st.header("🎓 Formation")
 
-    st.write("**Deuxième année en Formation Géomatique (2024 - 2026)**")
+    st.write("Deuxième année en Formation Géomatique (2024 - 2026)")
     st.write("Formation en géomatique générale : SIG, cartographie, télédétection, traitement de données spatiales.")
 
-    st.write("**Baccalauréat (2023) — Série L2**")
+    st.write("Baccalauréat (2023) — Série L2")
     st.write("Lycée : FRATERNITE")
 
-    st.write("**Brevet de Fin d’Études Moyennes (2018)**")
+    st.write("Brevet de Fin d’Études Moyennes (2018)")
     st.write("Collège : FRATERNITE")
 
-    st.write("**Certificat de Fin d’Études Élémentaires (2010)**")
+    st.write("Certificat de Fin d’Études Élémentaires (2010)")
     st.write("École : MOBUTOU SESESEKO")
 
     st.header("💼 Expérience / Formation Professionnelle")
 
     st.write("""
-    **Formation en Géomatique (2024 - 2026)**  
+    Formation en Géomatique (2024 - 2026)  
     - Cartographie numérique  
     - Systèmes d’Information Géographique (SIG)  
     - Télédétection  
