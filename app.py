@@ -3,71 +3,109 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="CV - Malick Diakhate", layout="wide")
 
-# CSS pour mettre le texte en noir sur tout le fond
+# CSS personnalisé avec dégradé
 st.markdown("""
     <style>
-    .block-container {
-        padding: 0rem !important;
-        max-width: 100% !important;
-    }
-
-    /* Fond global blanc */
     .stApp {
-        background-color: #FFFFFF;
-        color: #000000; /* texte noir par défaut */
-    }
-
-    /* Section GAUCHE (70% - BLANC) */
-    .main-col {
-        background-color: #FFFFFF;
+        background: linear-gradient(135deg, #fdfbfb, #ebedee);
         color: #000000;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 60px;
     }
 
-    /* Section DROITE (30% - BLEU CLAIR) */
-    .side-col {
-        background-color: #8cc8e2;
-        color: #000000; /* texte noir */
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 60px;
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #000000, #434343);
+        color: white;
     }
 
-    /* Titres et textes en noir */
-    .main-col h1, .main-col h2, .main-col h3,
-    .side-col h1, .side-col h2, .side-col h3,
-    .side-col p, .side-col li {
-        color: #000000 !important;
+    h1, h2, h3 {
+        color: #000000;
+    }
+
+    .sidebar-title {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .divider {
+        height: 4px;
+        background: linear-gradient(to right, #000000, #8cc8e2);
+        margin: 25px 0;
+        border-radius: 2px;
     }
     </style>
 """, unsafe_allow_html=True)
 
-# Création des colonnes (7:3)
-col1, col2 = st.columns([7, 3], gap="small")
+# Création des colonnes
+col1, col2 = st.columns([7,3])
 
 # -----------------------
-# COLONNE GAUCHE (70% - BLANC)
+# CONTENU PRINCIPAL (70%)
 # -----------------------
 with col1:
-    st.markdown('<div class="main-col">', unsafe_allow_html=True)
     st.title("Malick Diakhate")
     st.subheader("📍 Keur Massar, Sénégal")
     st.write("📧 malickdiakhate123@gmail.com")
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.write("📅 Né le 07 Mars 2000")
+
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+
+    # 🔹 Section Profil
+    st.header("👤 Profil")
+    st.write("""
+    Étudiant en Géomatique, passionné par la cartographie numérique et les technologies SIG.
+    Curieux, motivé et rigoureux, je cherche à mettre mes compétences en analyse spatiale,
+    webmapping et traitement de données au service de projets innovants.
+    """)
+
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+
+    st.header("🎯 Objectif")
+    st.write("""
+    Jeune diplômé motivé et sérieux, actuellement en deuxième année de formation en Géomatique,
+    je suis à la recherche d’une opportunité me permettant de mettre à profit mes compétences
+    et de développer mon expérience professionnelle dans un environnement stimulant.
+    """)
+
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+
+    st.header("🎓 Formation")
+    st.write("Deuxième année en Formation Géomatique (2024 - 2026)")
+    st.write("Formation en géomatique générale : SIG, cartographie, télédétection, traitement de données spatiales.")
+    st.write("Baccalauréat (2023) — Série L2, Lycée FRATERNITE")
+    st.write("Brevet de Fin d’Études Moyennes (2018), Collège FRATERNITE")
+    st.write("Certificat de Fin d’Études Élémentaires (2010), École MOBUTOU SESESEKO")
+
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+
+    st.header("💼 Expérience / Formation Professionnelle")
+    st.write("""
+    Formation en Géomatique (2024 - 2026)  
+    - Cartographie numérique  
+    - Systèmes d’Information Géographique (SIG)  
+    - Télédétection  
+    - Traitement et analyse de données spatiales  
+    - Utilisation de logiciels spécialisés
+    """)
 
 # -----------------------
-# COLONNE DROITE (30% - BLEU CLAIR)
+# SIDEBAR (30%)
 # -----------------------
 with col2:
-    st.markdown('<div class="side-col">', unsafe_allow_html=True)
-    st.header("Compétences")
-    st.write("- SIG\n- Webmapping\n- Python")
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("<p class='sidebar-title'>Compétences</p>", unsafe_allow_html=True)
+    st.write("""
+    - Bonne capacité d’adaptation  
+    - Sens de l’organisation  
+    - Travail en équipe  
+    - Maîtrise de Word et Excel  
+    - Bases en SIG et cartographie  
+    """)
+
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+
+    st.markdown("<p class='sidebar-title'>Centres d’intérêt</p>", unsafe_allow_html=True)
+    st.write("""
+    - Lecture  
+    - Sport  
+    - Nouvelles technologies  
+    - Engagement communautaire  
+    """)
