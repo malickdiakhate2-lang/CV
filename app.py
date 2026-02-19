@@ -20,22 +20,22 @@ st.markdown("""
     /* Section GAUCHE (70% - BLANC) */
     .main-col {
         background-color: #FFFFFF;
-        color: #000000;
+        color: #a7a7a7;
         padding: 60px;
         min-height: 100vh;
     }
 
     /* Section DROITE (30% - NOIR) */
     .side-col {
-        background-color: #000000;
-        color: #FFFFFF;
+        background-color: #8cc8e2;
+        color: #black;
         padding: 60px;
         min-height: 100vh;
     }
 
     /* Ajustement des couleurs de texte */
     .main-col h1, .main-col h2, .main-col h3 { color: #000000; }
-    .side-col h1, .side-col h2, .side-col h3, .side-col p, .side-col li { color: #FFFFFF !important; }
+    .side-col h1, .side-col h2, .side-col h3, .side-col p, .side-col li { color: #8cc8e2!important; }
     
     /* Style pour les titres de la section noire */
     .sidebar-title-custom {
@@ -48,7 +48,7 @@ st.markdown("""
 
     /* Ligne de séparation dans la partie blanche */
     hr {
-        border-color: #DDDDDD;
+        border-color: #000000;
     }
     </style>
 """, unsafe_allow_html=True)
