@@ -3,7 +3,7 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="CV - Malick Diakhate", layout="wide")
 
-# CSS pour centrer le texte sur le fond
+# CSS pour mettre le texte en noir sur tout le fond
 st.markdown("""
     <style>
     .block-container {
@@ -11,9 +11,10 @@ st.markdown("""
         max-width: 100% !important;
     }
 
-    /* Fond global */
+    /* Fond global blanc */
     .stApp {
         background-color: #FFFFFF;
+        color: #000000; /* texte noir par défaut */
     }
 
     /* Section GAUCHE (70% - BLANC) */
@@ -23,26 +24,29 @@ st.markdown("""
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* centre verticalement */
-        align-items: flex-start; /* aligne à gauche */
+        justify-content: center;
+        align-items: flex-start;
         padding: 60px;
     }
 
     /* Section DROITE (30% - BLEU CLAIR) */
     .side-col {
         background-color: #8cc8e2;
-        color: #FFFFFF;
+        color: #000000; /* texte noir */
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* centre verticalement */
+        justify-content: center;
         align-items: flex-start;
         padding: 60px;
     }
 
-    /* Titres */
-    .main-col h1, .main-col h2, .main-col h3 { color: #000000; }
-    .side-col h1, .side-col h2, .side-col h3, .side-col p, .side-col li { color: #FFFFFF !important; }
+    /* Titres et textes en noir */
+    .main-col h1, .main-col h2, .main-col h3,
+    .side-col h1, .side-col h2, .side-col h3,
+    .side-col p, .side-col li {
+        color: #000000 !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
